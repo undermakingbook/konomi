@@ -1,0 +1,21 @@
+# とりあえずのサンプル，やっていきワークフロー
+
+name: Sample workflow
+
+# developブランチへのpush時にテストを実行する
+on: push
+  branches:
+    - develop
+
+# ここからジョブを書いていきする
+jobs: 
+  # buildはジョブのID このIDで指定して色々やる
+  build:
+    name: Greeting
+    # Linuxを指定したほうが安いぞ！(というか開発環境はLinuxなので...)
+    runs-on: ubuntu-18.04
+    # どうやらstepsに実行するコマンドやActionを指定するらしい
+    # pythonのテストとかもこれでrunするのかな？
+    steps:
+      - name: Hello World
+        run:  echo "Hello World!"
