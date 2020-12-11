@@ -3,9 +3,10 @@
 name: Sample workflow
 
 # developブランチへのpush時にテストを実行する
-on: push
-  branches:
-    - develop
+on: 
+  push:
+    branches:
+      - develop
 
 # ここからジョブを書いていきする
 jobs: 
